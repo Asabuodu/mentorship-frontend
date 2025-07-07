@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 Mentorship Matching Platform
 
-## Getting Started
+A full-stack web application that enables incubators, accelerators, or organizations to match mentors with mentees. It supports user registration, role-based access, mentor discovery, session scheduling, feedback, and admin management.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 👥 User Roles
+- **Admin**: Manage users, sessions, and mentorship requests
+- **Mentor**: Set availability, accept mentees, and hold sessions
+- **Mentee**: Browse mentors, send requests, and book sessions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔐 Authentication
+- Email & password login
+- JWT-based authorization
+- Role-based route protection
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧑‍🏫 Mentor Discovery
+- Filter mentors by skills and industry
+- Request mentorship
+- Real-time request status
 
-## Learn More
+### 🗓️ Sessions
+- Mentors define availability blocks
+- Mentees book sessions post-approval
+- Feedback system with rating and comments
 
-To learn more about Next.js, take a look at the following resources:
+### 🧑‍💼 Admin Dashboard
+- View users, sessions, and requests
+- Change user roles
+- Access platform insights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tech Stack
 
-## Deploy on Vercel
+### Frontend
+- **Next.js 14** (App Router)
+- **Tailwind CSS**
+- **Zustand** (global state)
+- **Axios**, **js-cookie**, **jwt-decode**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Backend
+- **Node.js**, **Express**, **TypeScript**
+- **MongoDB** with **Mongoose**
+- **JWT Auth**, **Bcrypt**, **Dotenv**
+- RESTful API structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌍 Deployment
+
+| Layer     | Platform | URL                        |
+|-----------|----------|----------------------------|
+| Backend   | Railway  | `https://your-backend-url` |
+| Frontend  | Vercel   | `https://your-app-url`     |
+| Database  | MongoDB Atlas | Cloud-based MongoDB    |
+
+---
+
+## 📁 Folder Structure
+
+### Backend (`/mentorship-backend`)
