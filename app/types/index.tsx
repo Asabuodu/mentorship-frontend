@@ -47,6 +47,7 @@ export type Request = {
     mentor?: {
       _id: string;
     };
+     status: 'PENDING' | 'ACCEPTED' | 'REJECTED';
   };
 
 

@@ -47,8 +47,8 @@ export default function AvailabilityPage() {
   }, []);
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4">Your Availability</h2>
+    <div className="max-w-2xl mx-auto p-6 mt-10">
+      <h2 className="text-2xl font-bold mb-4 mt-10">Your Availability</h2>
 
       <div className="flex gap-2 mb-4">
         <select
@@ -74,7 +74,7 @@ export default function AvailabilityPage() {
           value={newBlock.endTime}
           onChange={(e) => setNewBlock({ ...newBlock, endTime: e.target.value })}
         />
-        <button onClick={addBlock} className="bg-blue-600 text-white px-4">
+        <button onClick={addBlock} className="bg-teal-600 hover:bg-teal-700 rounded-lg text-white px-4">
           Add
         </button>
       </div>

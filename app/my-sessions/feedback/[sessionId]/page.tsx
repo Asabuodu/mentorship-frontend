@@ -12,15 +12,6 @@ const [session, setSession] = useState<Session | null>(null);
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');
 
-  // useEffect(() => {
-  //   api.get(`/sessions/mentee`)
-  //     .then((res) => {
-  //       const found = res.data.find((s: any) => s._id === sessionId);
-  //       if (found) setSession(found);
-  //       else router.push('/my-sessions');
-  //     })
-  //     .catch(() => router.push('/my-sessions'));
-  // }, []);
 
     useEffect(() => {
     const load = async () => {

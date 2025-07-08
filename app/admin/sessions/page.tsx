@@ -17,10 +17,10 @@ export default function AdminSessionsPage() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 bg-transparent">
       <h2 className="text-2xl font-bold mb-4">All Sessions</h2>
       <table className="w-full border">
-        <thead className="bg-gray-100">
+        <thead className="bg-transparent">
           <tr>
             <th className="p-2 border">Mentor</th>
             <th className="p-2 border">Mentee</th>

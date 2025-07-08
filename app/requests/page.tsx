@@ -146,13 +146,15 @@ export default function MentorRequestsPage() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
+      <div className='bg-transparent shadow-xl bg-opacity-40 backdrop-blur-2xl mt-20'>
       <h2 className="text-2xl font-bold mb-4">Incoming Mentorship Requests</h2>
+
       {requests.length === 0 ? (
         <p>No requests yet.</p>
       ) : (
         <ul className="space-y-4">
           {requests.map((req) => (
-            <li key={req._id + req.status} className="border p-4 rounded">
+            <li key={req._id + req.status} className=" p-4 rounded">
               <p><strong>Mentee:</strong> {req.mentee?.name}</p>
               <p><strong>Goals:</strong> {req.mentee?.goals}</p>
               <p className="text-sm text-gray-500">{new Date(req.createdAt).toLocaleString()}</p>
@@ -164,7 +166,7 @@ export default function MentorRequestsPage() {
                       ? 'text-green-600'
                       : req.status === 'REJECTED'
                       ? 'text-red-600'
-                      : 'text-yellow-600'
+                      : 'text-yellow-500'
                   }
                 >
                   {req.status}
@@ -224,6 +226,7 @@ export default function MentorRequestsPage() {
           ))}
         </ul>
       )}
+      </div>
     </div>
   );
 }

@@ -14,9 +14,12 @@ export default function Dashboard() {
   if (!user) return null;
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-2">Welcome, {user.role}</h1>
+    <div className='h-screen p-5 '>
+      <div className="p-8 ">
+
+      <h1 className="text-2xl font-bold mb-2 ">Welcome, {user.role}</h1>
       <p>This is your dashboard.</p>
+    </div>
     </div>
   );
 }

@@ -21,39 +21,46 @@ export default function LoginPage() {
       const user = decodeUser(token);
       setUser(user);
       router.push('/dashboard');
+      // router.push('/profile/edit')
     } catch {
       alert('Login failed');
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-16">
-      <h2 className="text-xl font-semibold mb-4">Login</h2>
+    <div className=" h-screen p-5 absolute inset-0 bg-black/40  z-0">
+      <div className=' absolute inset-0 bg-[url(/bg2.jpg)] bg-no-repeat bg-center bg-fit bg-cover'>
+      
+      <div className="max-w-md mx-auto bg-transparent  my-auto mt-50 p-8 rounded-lg shadow-xl bg-opacity-40 backdrop-blur-lg">
+
+      <h2 className="text-xl font-semibold mb-4 text-white ">Login</h2>
       <form onSubmit={handleLogin} className="space-y-4">
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-2 border"
+          className="w-full p-2 border bg-transparent outline-none"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="w-full p-2 border"
+          className="w-full p-2 border bg-transparent outline-none text-white"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="w-full bg-blue-600 text-white p-2">
+        <button type="submit" className="w-full bg-teal-600 text-white p-2">
           Login
         </button>
-        <p className="text-sm text-gray-600 text-center">
-          Forgot your password? <a href="/reset-password" className="text-blue-600">Reset it</a>
+        <p className="text-sm text-white text-center">
+          Forgot your password? <a href="/reset-password" className="text-teal-500 ml-3">Reset it</a>
         </p>
-        <p className="text-sm text-gray-600 text-center">
-          Don&#39;t have an account? <a href="/register" className="text-blue-600">Register</a> 
+        <p className="text-sm text-white text-center">
+          Don&#39;t have an account? <a href="/register" className="text-teal-500 ml-3">Register</a> 
         </p>
       </form>
+      </div>
+      </div>
     </div>
   );
 }

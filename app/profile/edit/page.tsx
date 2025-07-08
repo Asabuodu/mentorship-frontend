@@ -48,7 +48,7 @@ export default function EditProfilePage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
+    <div className="max-w-md mx-auto mt-20 bg-transparent border-transparent p-8 rounded-lg shadow-xl  bg-opacity-40 backdrop-blur-xl">
       <h2 className="text-xl font-bold mb-4">Edit Profile</h2>
       <form onSubmit={handleSave} className="space-y-4">
         <input
@@ -56,36 +56,36 @@ export default function EditProfilePage() {
           placeholder="Name"
           value={profile.name}
           onChange={(e) => setProfile({ ...profile, name: e.target.value })}
-          className="w-full p-2 border"
+          className="w-full p-2 border outline-none text-white"
         />
         <input
           type="text"
           placeholder="Industry (optional)"
           value={profile.industry}
           onChange={(e) => setProfile({ ...profile, industry: e.target.value })}
-          className="w-full p-2 border"
+          className="w-full p-2 border outline-none text-white"
         />
         <textarea
           placeholder="Bio"
           value={profile.bio}
           onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
-          className="w-full p-2 border"
+          className="w-full p-2 border outline-none text-white"
         />
         <input
           type="text"
           placeholder="Skills (comma-separated)"
           value={profile.skills}
           onChange={(e) => setProfile({ ...profile, skills: e.target.value })}
-          className="w-full p-2 border"
+          className="w-full p-2 border outline-none text-white"
         />
         <input
           type="text"
           placeholder="Goals"
           value={profile.goals}
           onChange={(e) => setProfile({ ...profile, goals: e.target.value })}
-          className="w-full p-2 border"
+          className="w-full p-2 border outline-none text-white"
         />
-        <button className="w-full bg-blue-600 text-white p-2">Save Profile</button>
+        <button className="w-full bg-teal-600 hover:bg-teal-700 text-white p-2">Save Profile</button>
       </form>
     </div>
   );

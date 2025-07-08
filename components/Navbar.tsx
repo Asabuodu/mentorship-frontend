@@ -1,66 +1,3 @@
-// 'use client';
-
-// import Link from 'next/link';
-// import { useAuthStore } from '@/lib/store';
-// import { useRouter } from 'next/navigation';
-// import Cookies from 'js-cookie';
-
-// export default function Navbar() {
-//   const { user, setUser } = useAuthStore();
-//   const router = useRouter();
-
-//   const logout = () => {
-//     Cookies.remove('token');
-//     setUser(null);
-//     router.push('/login');
-//   };
-
-//   return (
-//     <nav className="bg-white shadow p-4 sticky top-0 z-50">
-//       <div className="max-w-6xl mx-auto flex justify-between items-center">
-//         <Link href="/" className="text-xl font-bold text-indigo-600">MentorMatch</Link>
-
-//         <div className="space-x-4">
-//           {!user && (
-//             <>
-//               <Link href="/login" className="text-gray-700 hover:text-indigo-600">Login</Link>
-//               <Link href="/register" className="text-gray-700 hover:text-indigo-600">Register</Link>
-//             </>
-//           )}
-
-//           {user && (
-//             <>
-//               <Link href="/dashboard" className="text-gray-700 hover:text-indigo-600">Dashboard</Link>
-//               <Link href="/profile/edit" className="text-gray-700 hover:text-indigo-600">Profile</Link>
-
-//               {user.role === 'mentee' && (
-//                 <>
-//                   <Link href="/mentors" className="text-gray-700 hover:text-indigo-600">Mentors</Link>
-//                   <Link href="/my-sessions" className="text-gray-700 hover:text-indigo-600">Sessions</Link>
-//                 </>
-//               )}
-
-//               {user.role === 'mentor' && (
-//                 <>
-//                   <Link href="/requests" className="text-gray-700 hover:text-indigo-600">Requests</Link>
-//                   <Link href="/availability" className="text-gray-700 hover:text-indigo-600">Availability</Link>
-//                 </>
-//               )}
-
-//               {user.role === 'admin' && (
-//                 <Link href="/admin/users" className="text-gray-700 hover:text-indigo-600">Admin Panel</Link>
-//               )}
-
-//               <button onClick={logout} className="ml-2 text-red-600 hover:underline">Logout</button>
-//             </>
-//           )}
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
 
 'use client';
 
@@ -87,25 +24,25 @@ export default function Navbar() {
 
   const renderLinks = () => (
     <>
-      <Link href="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-      <Link href="/profile/edit" onClick={() => setMenuOpen(false)}>Profile</Link>
+      <Link href="/dashboard" className='text-white hover:text-teal-700' onClick={() => setMenuOpen(false)}>Dashboard</Link>
+      <Link href="/profile/edit" className='text-white hover:text-teal-700' onClick={() => setMenuOpen(false)}>Profile</Link>
 
       {user?.role === 'mentee' && (
         <>
-          <Link href="/mentors" onClick={() => setMenuOpen(false)}>Mentors</Link>
-          <Link href="/my-sessions" onClick={() => setMenuOpen(false)}>Sessions</Link>
+          <Link href="/mentors" className='text-white hover:text-teal-700'  onClick={() => setMenuOpen(false)}>Mentors</Link>
+          <Link href="/my-sessions" className='text-white hover:text-teal-700'  onClick={() => setMenuOpen(false)}>Sessions</Link>
         </>
       )}
 
       {user?.role === 'mentor' && (
         <>
-          <Link href="/requests" onClick={() => setMenuOpen(false)}>Requests</Link>
-          <Link href="/availability" onClick={() => setMenuOpen(false)}>Availability</Link>
+          <Link href="/requests" className='text-white hover:text-teal-700'  onClick={() => setMenuOpen(false)}>Requests</Link>
+          <Link href="/availability" className='text-white hover:text-teal-700'  onClick={() => setMenuOpen(false)}>Availability</Link>
         </>
       )}
 
       {user?.role === 'admin' && (
-        <Link href="/admin/users" onClick={() => setMenuOpen(false)}>Admin Panel</Link>
+        <Link href="/admin/users" className='text-white hover:text-teal-700'  onClick={() => setMenuOpen(false)}>Admin Panel</Link>
       )}
 
       {/* {user?.role === 'admin' && (
@@ -120,16 +57,22 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="bg-white shadow-md p-4 sticky top-0 z-50">
+    <nav className="bg-teal-600 shadow-md p-4  top-0 z-50 text-white">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-indigo-600">MentorMatch</Link>
+        <Link href="/" className="text-2xl font-bold text-white">MentorMatch</Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-4 text-gray-700">
           {!user ? (
             <>
+            <button className="text-white p-3 hover:text-indigo-300  text-xl">
+
               <Link href="/login">Login</Link>
+            </button>
+            <button className="text-white p-3 hover:text-indigo-300 text-xl">
+
               <Link href="/register">Register</Link>
+            </button>
             </>
           ) : renderLinks()}
         </div>
