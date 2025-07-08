@@ -53,8 +53,8 @@ A full-stack web application that enables incubators, accelerators, or organizat
 
 | Layer     | Platform | URL                        |
 |-----------|----------|----------------------------|
-| Backend   | Railway  | `https://your-backend-url` |
-| Frontend  | Vercel   | `https://your-app-url`     |
+| Backend   | render.com  | `https://mentorship-backend-kpo6.onrender.com` |
+| Frontend  | Vercel   | `https://mentorship-frontend-git-master-asabuodu-innocents-projects.vercel.app/start`     |
 | Database  | MongoDB Atlas | Cloud-based MongoDB    |
 
 ---
