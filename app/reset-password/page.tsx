@@ -1,10 +1,11 @@
 'use client';
+import { Suspense } from 'react';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import api from '@/lib/api';
 import { useRouter } from 'next/navigation';
 
-export default function ResetPasswordPage() {
+function ResetPasswordPage() {
   const params = useSearchParams();
   const token = params.get('token');
   const router = useRouter();
@@ -38,7 +39,10 @@ export default function ResetPasswordPage() {
   }, [token]);
 
   return (
-    <div className="max-w-md mx-auto bg-transparent  my-auto mt-50 p-8 rounded-lg shadow-xl bg-opacity-40 backdrop-blur-lg">
+    <div className=" h-screen p-5 absolute inset-0 bg-black/40  z-0">
+        <div className=' absolute inset-0 bg-[url(/bg2.jpg)] bg-no-repeat bg-center bg-fit bg-cover'>
+        
+    <div className="max-w-md mx-auto bg-transparent  my-auto mt-50 p-8 rounded-lg shadow-xl bg-opacity-40 backdrop-blur-sm">
       <h2 className="text-2xl font-bold mb-4 text-white">Reset Your Password</h2>
 
       <form onSubmit={handleReset} className="space-y-4">
@@ -63,5 +67,16 @@ export default function ResetPasswordPage() {
 
       {message && <p className="mt-4 text-sm text-white">{message}</p>}
     </div>
+        </div>
+</div>
+  );
+  
+}
+
+export default function ResetPasswordPageWrapper() {
+  return (
+    <Suspense fallback={<div className="text-white">Loading...</div>}>
+      <ResetPasswordPage />
+    </Suspense>
   );
 }

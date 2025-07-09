@@ -28,6 +28,9 @@ export default function ResetRequestPage() {
 
 
   return (
+    <div className=" h-screen p-5 absolute inset-0 bg-black/40  z-0">
+      <div className=' absolute inset-0 bg-[url(/bg2.jpg)] bg-no-repeat bg-center bg-fit bg-cover'>
+
     <div className="max-w-md mx-auto  bg-transparent  my-auto mt-50 p-8 rounded-lg shadow-xl bg-opacity-40 backdrop-blur-lg">
       <h2 className="text-2xl font-bold mb-4 text-white">Request Password Reset</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -54,6 +57,8 @@ export default function ResetRequestPage() {
           )}
         </p>
       )}
+    </div>
+      </div>
     </div>
   );
 }
