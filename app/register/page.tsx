@@ -49,7 +49,6 @@ export default function RegisterPage() {
         >
           <option value="mentee">Mentee</option>
           <option value="mentor">Mentor</option>
-          <option value="mentor">Admin</option>
         </select>
         <button type="submit" className="w-full bg-teal-600 text-white p-2">
           Register
