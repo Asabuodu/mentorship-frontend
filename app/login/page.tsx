@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/lib/store';
 import { decodeUser } from '@/lib/auth';
+import { AxiosError } from 'axios';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -12,20 +13,37 @@ export default function LoginPage() {
   const router = useRouter();
   const setUser = useAuthStore((s) => s.setUser);
 
+  // const handleLogin = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await api.post('/auth/login', { email, password });
+  //     const token = res.data.token;
+  //     Cookies.set('token', token);
+  //     const user = decodeUser(token);
+  //     setUser(user);
+  //     router.push('/dashboard');
+  //     // router.push('/profile/edit')
+  //   } catch {
+  //     alert('Login failed');
+  //   }
+  // };
+
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const res = await api.post('/auth/login', { email, password });
-      const token = res.data.token;
-      Cookies.set('token', token);
-      const user = decodeUser(token);
-      setUser(user);
-      router.push('/dashboard');
-      // router.push('/profile/edit')
-    } catch {
-      alert('Login failed');
-    }
-  };
+  e.preventDefault();
+  try {
+    const res = await api.post('/auth/login', { email, password });
+    const token = res.data.token;
+    Cookies.set('token', token);
+    const user = decodeUser(token);
+    setUser(user);
+    router.push('/dashboard');
+  } catch (err: unknown) {
+  const axiosErr = err as AxiosError<{ error: string }>;
+  const message = axiosErr?.response?.data?.error || 'Login failed';
+  alert(message);
+}
+};
+
 
   return (
     <div className=" h-screen p-5 absolute inset-0 bg-black/40  z-0">
