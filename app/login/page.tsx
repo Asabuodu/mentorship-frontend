@@ -71,7 +71,7 @@ export default function LoginPage() {
           Login
         </button>
         <p className="text-sm text-white text-center">
-          Forgot your password? <a href="/reset-password" className="text-teal-500 ml-3">Reset it</a>
+          Forgot your password? <a href="/reset-request" className="text-teal-500 ml-3">Reset it</a>
         </p>
         <p className="text-sm text-white text-center">
           Don&#39;t have an account? <a href="/register" className="text-teal-500 ml-3">Register</a> 
