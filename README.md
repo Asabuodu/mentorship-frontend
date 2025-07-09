@@ -62,3 +62,15 @@ A full-stack web application that enables incubators, accelerators, or organizat
 ## 📁 Folder Structure
 
 ### Backend (`/mentorship-backend`)
+
+
+- Login details for 2 mentors
+mentor@gmail.com, password:12345
+mentor1@gmail.com, password:12345
+
+- Login details for 2 mentees
+mentee@gmail.com password:12345
+mentee1@gmail.com password:12345
+
+- Login details for 1 admin
+admin@gmail.com password:12345
