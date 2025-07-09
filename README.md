@@ -73,4 +73,4 @@ mentee@gmail.com password:12345
 mentee1@gmail.com password:12345
 
 - Login details for 1 admin
-admin@gmail.com password:12345
+admin1@gmail.com password:12345
