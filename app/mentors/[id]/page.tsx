@@ -56,7 +56,7 @@ export default function MentorAvailabilityPage() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-transparent">
+    <div className="max-w-2xl mx-auto p-6 bg-transparent shadow-xl bg-opacity-40 backdrop-blur-xl">
       <h2 className="text-2xl font-bold mb-4">Available Slots</h2>
 
       <ul className="space-y-4">

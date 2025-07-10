@@ -91,7 +91,7 @@ export default function MentorListPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-transparent">
+    <div className="max-w-4xl mx-auto p-6 bg-transparent shadow-xl bg-opacity-40 backdrop-blur-lg">
       <h2 className="text-2xl font-bold mb-4">Find a Mentor</h2>
 
       <div className="flex gap-4 mb-6 md:flex-row flex-col">
@@ -112,7 +112,7 @@ export default function MentorListPage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white shadow-xl bg-opacity-40 backdrop-blur-lg">
         {mentors.map((mentor) => (
           <div key={mentor._id} className="border p-4 rounded">
             <h3 className="text-lg font-semibold">{mentor.name}</h3>
