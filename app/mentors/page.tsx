@@ -94,7 +94,7 @@ export default function MentorListPage() {
     <div className="max-w-4xl mx-auto p-6 bg-transparent">
       <h2 className="text-2xl font-bold mb-4">Find a Mentor</h2>
 
-      <div className="flex gap-4 mb-6">
+      <div className="flex gap-4 mb-6 md:flex-row flex-col">
         <input
           placeholder="Filter by skill"
           className="border p-2 flex-1 outline-none text-white"
